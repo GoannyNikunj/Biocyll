@@ -93,6 +93,7 @@ BlogRouter.delete("/api/delete/Blog/:id", async (req, res) => {
 BlogRouter.put("/api/update/Blogs/:id", async (req, res) => {
   try {
 
+    console.log(req.body);
     const existingBlog = await blogModel.findById(req.params.id);
 
     if(req.body.Title){
